@@ -466,7 +466,7 @@ proc mainLoop*(
     # Starting backfill/backward sync manager.
     if dag.needsBackfill():
       overseer.syncKind = SyncKind.TrustedNodeSync
-      asyncSpawn overseer.startBackfillTask()
+      # asyncSpawn overseer.startBackfillTask()
     return
   else:
     if dag.needsBackfill():
